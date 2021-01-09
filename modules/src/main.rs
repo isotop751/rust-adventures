@@ -20,8 +20,16 @@ fn main() {
 
 
     // demo for enums
-    let egg_colors = eggs::eggs::Colors::Blue;
-    if match egg_colors
+    let colors = [
+        eggs::eggs::Colors::Red,
+        eggs::eggs::Colors::Blue,
+        eggs::eggs::Colors::Green,
+        eggs::eggs::Colors::Yellow  
+    ];
+
+    let egg_color = &colors[0];
+
+    if match egg_color
     {
         eggs::eggs::Colors::Blue => true,
         eggs::eggs::Colors::Red => false,
