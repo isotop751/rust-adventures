@@ -1,6 +1,8 @@
 mod dragons;
 
 use dragons::eggs;
+use rand::Rng;
+
 
 fn main() {
     println!("Hello, world!");
@@ -27,7 +29,9 @@ fn main() {
         eggs::eggs::Colors::Yellow  
     ];
 
-    let egg_color = &colors[0];
+    let random_number = rand::thread_rng().gen_range(0..colors.len());
+
+    let egg_color = &colors[random_number];
 
     if match egg_color
     {
